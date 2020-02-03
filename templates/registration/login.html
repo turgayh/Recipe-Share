@@ -5,7 +5,9 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="script.js"></script>
+  {% load static %}
+  <script src="{% static 'script/login.js' %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
 </head>
 
 {% block content %}

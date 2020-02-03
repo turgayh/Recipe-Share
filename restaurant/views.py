@@ -1,10 +1,10 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from .models import Recipe as RecipeModel
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-
-# Create your views here.
+from django.http import HttpResponse, HttpResponseRedirect
+from django.core.mail import send_mail, BadHeaderError
 
 
 class RecipeList(generic.ListView):
